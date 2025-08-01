@@ -1,0 +1,67 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import SectionTitle from '../components/SectionTitle';
+import ServiceCard from '../components/ServiceCard';
+import { FaTruck, FaCar, FaTractor, FaTools, FaWarehouse, FaShippingFast } from 'react-icons/fa';
+
+const ServicesSection = () => {
+  const services = [
+    {
+      icon: <FaCar size={24} />,
+      title: 'Derek Mobil',
+      description: 'Layanan derek untuk semua jenis mobil dengan penanganan profesional dan aman sampai ke tujuan.'
+    },
+    {
+      icon: <FaTruck size={24} />,
+      title: 'Derek Truk & Bus',
+      description: 'Layanan derek untuk kendaraan berat seperti truk dan bus dengan peralatan khusus dan tim berpengalaman.'
+    },
+    {
+      icon: <FaTractor size={24} />,
+      title: 'Rental Excavator',
+      description: 'Sewa excavator berbagai ukuran untuk proyek konstruksi, penggalian, dan pembangunan infrastruktur.'
+    },
+    {
+      icon: <FaTools size={24} />,
+      title: 'Rental Bulldozer',
+      description: 'Sewa bulldozer untuk proyek pembukaan lahan, perataan tanah, dan konstruksi jalan.'
+    },
+    {
+      icon: <FaWarehouse size={24} />,
+      title: 'Rental Crane',
+      description: 'Sewa crane untuk proyek pengangkatan material berat, konstruksi gedung, dan instalasi peralatan.'
+    },
+    {
+      icon: <FaShippingFast size={24} />,
+      title: 'Transportasi Alat Berat',
+      description: 'Layanan pengiriman dan transportasi alat berat ke lokasi proyek dengan aman dan tepat waktu.'
+    }
+  ];
+
+  return (
+    <section id="services" className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <SectionTitle
+          subtitle="Layanan Kami"
+          title="Solusi Lengkap untuk Kebutuhan Anda"
+          description="Kami menyediakan berbagai layanan derek dan rental alat berat untuk mendukung kebutuhan transportasi dan konstruksi Anda."
+          center={true}
+        />
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+              delay={index * 0.1}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;
