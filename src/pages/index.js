@@ -84,7 +84,7 @@ export default function QRGenerator() {
   return (
     <>
       <Head>
-        <title>D'QRGenerator</title>
+        <title>DQRGenerator</title>
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-sky-50 to-indigo-50 p-4 sm:p-8">
         <div className="max-w-5xl mx-auto">
