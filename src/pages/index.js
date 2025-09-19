@@ -91,7 +91,7 @@ export default function QRGenerator() {
           {/* Header */}
           <div className="text-center mb-10">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-indigo-600 bg-clip-text text-transparent">
-              D'QRGenerator
+              D-QRGenerator
             </h1>
             <p className="text-gray-500 mt-2">Buat qrcode kamu sendiri</p>
           </div>
